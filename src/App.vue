@@ -1,24 +1,39 @@
 <template>
-  <div id="App">
+  <div id="app">
+    <NavbarPage />
     <router-view></router-view>
+
+  
+    <hr class="section-separator" />
+
+    <FooterPage />
   </div>
 </template>
 
-<script>
 
+<script>
 import { defineComponent } from 'vue';
+import NavbarPage from './components/NavbarPage.vue';
+import FooterPage from './components/FooterPage.vue'; 
 
 export default defineComponent({
   name: 'App',
-  
+  components: {
+    NavbarPage,
+    FooterPage 
+  }
 });
 </script>
 
 <style>
-/* Ajoutez vos styles CSS ici */
 #app {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: rgb(25, 159, 159);
+}
+.section-separator {
+  border: none; 
+  height: 2px; 
+  background-color: #ffffff; 
+  width: 100%; 
+  margin: 50px auto; 
 }
 </style>

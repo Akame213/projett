@@ -1,59 +1,61 @@
 <template>
   <nav class="navbar">
-    <!-- Logo et nom -->
     <div class="logo-container">
       <img src="/logo.png" alt="Mon logo de portfolio" class="logo">
       <span class="name">Marouane Frahi</span>
     </div>
-
-    <!-- Liens de navigation -->
     <ul class="nav-links">
-      <li><router-link to="/" class="nav-link">Accueil</router-link></li>
-      <li><router-link to="/contact" class="nav-link">Projets</router-link></li>
-      <li><router-link to="/about" class="nav-link">À propos</router-link></li>
+      <li><a href="http://localhost:8080" class="nav-link">Acceuil</a></li>
+     
+      <li>
+        <a href="http://localhost:8080/work" class="nav-link">Mes Projets</a>
+      </li>
+      <li><a href="http://localhost:8080/about" class="nav-link">A propos</a></li>
     </ul>
-
-    <!-- Liens des réseaux sociaux -->
     <ul class="nav-reseaux">
       <li>
         <a href="https://www.linkedin.com/in/marouane-frahi-619981304/" target="_blank" class="social-link">
-          <img src="logo-linkedin.png" alt="renvoie vers mon profil LinkedIn" class="linkedin-logo">
+          <img src="/logo-linkedin.png" alt="LinkedIn" class="linkedin-logo">
         </a>
       </li>
       <li>
-      <a href="https://github.com/Akame213" target="_blank" class="social-link">
-          <img src="git-hub.png" alt="renvoie vers mon profil git hub" class="git-logo">
-      </a>
-        </li>
-        <li>
-      <a href="https://www.instagram.com/marouanefrahi/" target="_blank" class="social-link">
-          <img src="instagram.png" alt="renvoie vers mon profil instagram" class="instagram-logo">
-      </a>
-        </li>
+        <a href="https://github.com/Akame213" target="_blank" class="social-link">
+          <img src="/git-hub.png" alt="GitHub" class="git-logo">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/marouanefrahi/" target="_blank" class="social-link">
+          <img src="/instagram.png" alt="Instagram" class="instagram-logo">
+        </a>
+      </li>
     </ul>
   </nav>
 </template>
 
 <script>
-export default {
-  name: "NavbarPage"
-};
+import { defineComponent } from 'vue';
+
+
+export default defineComponent({
+  name: "NavbarPage",
+  components: {
+   
+  }
+});
 </script>
 
-<style scoped>
-/* Styles spécifiques à la barre de navigation */
+<style>
 .navbar {
   background-color: #ffffff;
   padding: 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  margin-right: 300px;
-  
 }
 
 .logo {
@@ -72,15 +74,14 @@ export default {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center; /* Centrer horizontalement les éléments */
 }
 
 .nav-links li {
-  margin: 0 10px; /* Ajout d'un espacement horizontal uniforme entre les éléments */
+  margin: 0 10px;
 }
 
-a.nav-link {
-  color: white;
+.nav-link {
+  color: #ffffff;
   text-decoration: none;
   font-size: 20px;
   padding: 10px 20px;
@@ -89,8 +90,9 @@ a.nav-link {
   transition: box-shadow 0.3s ease;
 }
 
-a.nav-link:hover {
-  box-shadow: 0px 0px 10px rgb(25, 159, 159);;
+.nav-link:hover {
+  box-shadow: 0px 0px 10px rgb(25, 159, 159);
+  cursor: pointer;
 }
 
 .nav-reseaux {
@@ -100,39 +102,25 @@ a.nav-link:hover {
 }
 
 .nav-reseaux li {
-  margin-left: 20px; /* Ajoutez un espace entre les logos et les autres liens */
+  margin-left: 20px;
 }
 
 .social-link {
-  text-decoration: none; /* Supprimez le soulignement du lien */
+  text-decoration: none;
 }
 
-.linkedin-logo {
-  width: 48px; 
+.linkedin-logo,
+.git-logo,
+.instagram-logo {
+  width: 48px;
   height: auto;
-  border-radius: 10px;
-  margin-left: 250px;
-  transition: box-shadow 0.3s ease; /* Ajoutez une transition pour l'ombre */
-}
-
-.linkedin-logo:hover {
-  box-shadow: 0px 0px 10px rgb(25, 159, 159);; /* Ajoutez une ombre au survol */
-}
-.git-logo{
-  width: 50px;
   border-radius: 10px;
   transition: box-shadow 0.3s ease;
 }
-.git-logo:hover {
-  box-shadow: 0px 0px 10px rgb(25, 159, 159);; /* Ajoutez une ombre au survol */
-}
-.instagram-logo {
-  width: 48px; 
-  height: auto;
-  border-radius: 10px;
-  transition: box-shadow 0.3s ease; /* Ajoutez une transition pour l'ombre */
-}
+
+.linkedin-logo:hover,
+.git-logo:hover,
 .instagram-logo:hover {
-  box-shadow: 0px 0px 10px rgb(25, 159, 159);; /* Ajoutez une ombre au survol */
+  box-shadow: 0px 0px 10px rgb(25, 159, 159);
 }
 </style>

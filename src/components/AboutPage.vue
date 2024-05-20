@@ -31,26 +31,37 @@
   </script>
   
   <style scoped>
+  
       .container{
-       color: white;
         text-align: center;
         max-width: 1200px;
         margin-left: 120px;
       }
+      h1,h2,h3,p,ul,li,img{
+        text-align: center;
+        margin: 0 auto; /* Centre le conteneur sur la page */
+  padding: 20px; 
+}
       h1{
         font-size: 4rem;
+        color: white;
       }
       h2,h3{
         font-size: 2rem;
+        color: white;
+        
       }
      
       p,li{
         font-size: 1.25rem;
+        color: white;
 
       }
       img{
         width: 550px;
-      }
+        display: block;
+        margin: 0 auto;     
+       }
       ul,li{
        list-style-type: none;
       }

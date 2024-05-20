@@ -1,83 +1,84 @@
 <template>
   <div class="container">
-  <div class="menu-container">
-    <h1>Hello, je m'appelle <br>Marouane Frahi</h1>
-    <h2>Je suis un développeur Full-Stack habitant en <br>France, près de Rouen</h2>
-    <div class="dev">Développeur</div>
-  </div> 
-
-  <ul class="skills">
-    <li>
-      <h3>Fullstack</h3>
-      <ul>
-        <li>Construisons ensemble des expériences web exceptionnelles, de la conception à la réalisation.</li>
-      </ul>
-    </li>
-    <li>
-      <h3>Team player</h3>
-      <ul>
-        <li>Dans l'union des esprits, le travail de groupe transcende les limites individuelles, donnant naissance à des accomplissements remarquables et durables.</li>
-      </ul>
-    </li>
-    <li>
-      <h3>Persévérant</h3>
-      <ul>
-        <li>La persévérance est comme l'eau qui sculpte la pierre : avec le temps, rien ne lui résiste.</li>
-      </ul>
-    </li>
-  </ul>
-
-  <h2 class="title"> Mes Projets :</h2>
-  
-  <div class="projet">
-    <div class="projet-item">
-      <h3 class="projet-title">CV</h3>
-      <img src="cvv.jpg" alt="l'image de mon CV" class="cv">
+    <div class="content">
+      <h1>Hello, je m'appelle <br>Marouane Frahi</h1>
+      <h2>Je suis un développeur Full-Stack habitant en <br>France, près de Rouen</h2>
+      <div class="dev">Développeur</div>
     </div>
-    <div class="projet-item">
-      <h3 class="projet-title">Cahier des charges</h3>
-      <img src="cahier.jpg" alt="l'image de mon cahier des charges" class="cdg">
-    </div>
-    <div class="projet-item">
-      <h3 class="projet-title">Espace commentaire</h3>
-      <img src="espace-commentaire.jpg" alt="l'image de mon espace commentaire" class="commentaire">
+
+    <ul class="skills">
+      <li>
+        <h3>Fullstack</h3>
+        <p>Construisons ensemble des expériences web exceptionnelles, d'une conception à la réalisation.</p>
+      </li>
+      <li>
+        <h3>Team player</h3>
+        <p>Dans l'union des esprits, le travail de groupe transcende les limites individuelles, donnant naissance à des accomplissements remarquables et durables.</p>
+      </li>
+      <li>
+        <h3>Persévérant</h3>
+        <p>La persévérance est comme l'eau qui sculpte la pierre : avec le temps, rien ne lui résiste.</p>
+      </li>
+    </ul>
+
+    <div class="projects">
+      <h2 class="title">Mes Projets :</h2>
+      <div class="project-grid">
+        <div class="project-item">
+          <h3>CV</h3>
+          <img src="cvv.jpg" alt="Image de mon CV">
+        </div>
+        <div class="project-item">
+          <h3>Cahier des charges</h3>
+          <img src="cahier.jpg" alt="Image de mon cahier des charges">
+        </div>
+        <div class="project-item">
+          <h3>Espace commentaire</h3>
+          <img src="espace-commentaire.jpg" alt="Image de mon espace commentaire">
+        </div>
+      </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
 export default {
-  // Votre script ici
-}
+  name: 'HomePage'
+};
 </script>
 
 <style scoped>
-.container{
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
   color: white;
 }
-.menu-container {
+
+.content {
   margin-left: 200px;
   margin-top: 50px;
-  
 }
 
 h1 {
   font-size: 4rem;
-  
-
+  color: white;
+  margin-left: -700px;
 }
 
 h2 {
   font-size: 2rem;
+  color: white;
+  margin-left: -600px;
 }
 
 .dev {
-  color: white;
+  color: rgb(13, 141, 141);
   text-decoration: none;
   font-size: 20px;
   padding: 10px 20px;
-  background-color: rgb(16, 121, 121);
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   max-width: 120px;
 }
@@ -88,55 +89,61 @@ h2 {
   padding: 25px;
   margin-left: 200px;
   margin-top: 60px;
-  border: 2px solid rgb(25, 159, 159);
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 15px;
   max-width: 1100px;
-  color: rgb(0, 0, 0);
+  list-style-type: none;
 }
 
 h3 {
   margin-left: 50px;
   font-size: 2rem;
+  color: rgb(255, 255, 255);
 }
 
-li {
+.skills li, .skills p {
   font-size: 1.25rem;
+  color: rgb(255, 255, 255);
 }
 
-.skills, li {
-  list-style-type: none;
-  color: white;
+.projects {
+  padding: 5px;
+  margin: 100px;
+  border: 2px solid white;
+  border-radius: 15px;
 }
-.title{
+
+.title {
   margin-left: 150px;
   margin-top: 150px;
   font-size: 2.5rem;
 }
-.projet {
+
+.project-grid {
   display: flex;
   justify-content: space-around;
   margin-top: 50px;
 }
 
-.projet-item {
+.project-item {
   text-align: center;
 }
 
-.projet-title {
+.project-title {
   font-size: 1.5rem;
   margin-top: 10px;
-  margin-left:-50px ;
+  margin-left: -50px;
 }
 
-.projet img {
+.project-item img {
   width: 350px;
   border-radius: 15px;
-  margin: 10px; /* Espacement entre les images */
-  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.projet img:hover {
-  transform: scale(1.05); /* Zoom au survol */
-  box-shadow: 0px 0px 10px rgb(255, 255, 255);; /* Ajout d'une ombre au survol */
+.project-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 </style>
