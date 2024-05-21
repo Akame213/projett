@@ -2,8 +2,8 @@
 node_modules
 /dist
 
-
-# local env files
+# Environment files
+mail.env
 .env.local
 .env.*.local
 

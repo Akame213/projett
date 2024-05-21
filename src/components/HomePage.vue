@@ -26,15 +26,15 @@
       <div class="project-grid">
         <div class="project-item">
           <h3>CV</h3>
-          <img src="cvv.jpg" alt="Image de mon CV">
+          <a href="http://localhost:8080/work/cv"><img src="cvv.jpg" alt="Image de mon CV"></a>
         </div>
         <div class="project-item">
           <h3>Cahier des charges</h3>
-          <img src="cahier.jpg" alt="Image de mon cahier des charges">
+          <a href="http://localhost:8080/work/cahier"><img src="cahier.jpg" alt="Image de mon cahier des charges"></a>
         </div>
         <div class="project-item">
           <h3>Espace commentaire</h3>
-          <img src="espace-commentaire.jpg" alt="Image de mon espace commentaire">
+          <a href="http://localhost:8080/work/comment"><img src="espace-commentaire.jpg" alt="Image de mon espace commentaire"></a>
         </div>
       </div>
     </div>

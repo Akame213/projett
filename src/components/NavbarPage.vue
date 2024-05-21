@@ -1,8 +1,10 @@
 <template>
   <nav class="navbar">
     <div class="logo-container">
+      <a href="http://localhost:8080/">
       <img src="/logo.png" alt="Mon logo de portfolio" class="logo">
       <span class="name">Marouane Frahi</span>
+    </a>
     </div>
     <ul class="nav-links">
       <li><a href="http://localhost:8080" class="nav-link">Acceuil</a></li>
@@ -56,8 +58,11 @@ export default defineComponent({
 .logo-container {
   display: flex;
   align-items: center;
+  position: fixed;
 }
-
+a{
+  text-decoration: none;
+}
 .logo {
   width: 70px;
   height: auto;
@@ -67,11 +72,14 @@ export default defineComponent({
 .name {
   font-size: 20px;
   font-weight: bold;
+  text-decoration: none;
+  color: black;
+  margin-left: -100px;
 }
 
 .nav-links {
   list-style-type: none;
-  margin: 0;
+ margin-left: 500px;
   padding: 0;
   display: flex;
 }

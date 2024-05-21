@@ -31,7 +31,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
 .container {
   text-align: center;
   color: white;
